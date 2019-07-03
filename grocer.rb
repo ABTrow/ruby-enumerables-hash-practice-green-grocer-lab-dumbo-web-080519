@@ -61,6 +61,6 @@ def checkout(cart, coupons)
   
   final = prices.reduce { |a, b| a + b}
   
-  final > 100 ? final 
+  final > 100 ? final * 0.9 : final
   
 end
