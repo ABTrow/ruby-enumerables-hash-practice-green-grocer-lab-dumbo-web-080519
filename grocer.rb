@@ -57,5 +57,6 @@ def checkout(cart, coupons)
   final_cart.each do |item, item_info|
     prices << item_info[:price]
   end
-  prices.reduce { |0
+  
+  prices.reduce { |a, b| a + b}
 end
