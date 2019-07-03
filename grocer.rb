@@ -53,11 +53,14 @@ end
 
 def checkout(cart, coupons)
   final_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
-  p final_cart
   prices = []
+  
   final_cart.each do |item, item_info|
     prices << item_info[:price] * item_info[:count]
   end
-  p prices
-  prices.reduce { |a, b| a + b}
+  
+  final = prices.reduce { |a, b| a + b}
+  
+  final >=
+  
 end
